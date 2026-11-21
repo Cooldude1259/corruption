@@ -16,7 +16,8 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.cooldude1259.corruption.Corruption"
+			"com.cooldude1259.corruption.Corruption",
+			"com.cooldude1259.corruption.CorruptionModPotions"
 		],
 		"client": [
 			"com.cooldude1259.corruption.client.CorruptionClient"
