@@ -2,6 +2,7 @@ package com.cooldude1259.corruption;
 
 import java.util.function.Function;
 
+import com.cooldude12.unnoficialtadc.ModBlocks;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -11,6 +12,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 
 import com.cooldude12.unnoficialtadc.CostumeItem;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 
 public class ModItems {
     public static final String MOD_ID = "corruption";

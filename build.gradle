@@ -48,7 +48,10 @@ dependencies {
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
     // tadc-mc things
-    modImplementation "maven.modrinth:rZJnFQoE:gpmpCEFY"
+    // Local build of tadc-mc 1.5.0: it has CostumeMap.register(...) and the protected CostumeBlockEntity constructor.
+    // Once 1.5.0 is on Modrinth, delete this line and use the Modrinth one below with the new version ID.
+    modImplementation files("../unofficial-tadc-mc-server-1.21.11/build/libs/tadc-mc-1.5.0.jar")
+    // modImplementation "maven.modrinth:rZJnFQoE:VNc9TaF8"
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"

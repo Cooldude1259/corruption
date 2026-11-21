@@ -1,7 +1,9 @@
 package com.cooldude1259.corruption;
 
 import com.cooldude1259.corruption.effect.CorruptionModEffects;
+import com.cooldude12.unnoficialtadc.CostumeMap;
 import net.fabricmc.api.ModInitializer;
+import net.minecraft.world.level.block.Blocks;
 
 import net.minecraft.resources.Identifier;
 
@@ -21,6 +23,12 @@ public class Corruption implements ModInitializer {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
+
+        // Order matters: blocks, then the block entity type that lists them, then the costume mapping
+        CorruptionBlocks.initialize();
+        CorruptionBlockEntities.initialize();
+        // Tell tadc-mc's costume engine: costuming vanilla dirt turns it into our wrapper block
+        CostumeMap.register(Blocks.DIRT, CorruptionBlocks.COSTUMED_DIRT);
 
         ModItems.initialize();
         CorruptionModEffects.initialize();
